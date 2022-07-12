@@ -1,0 +1,26 @@
+FROM schtr4jh/pckg:latest AS deps
+MAINTAINER schtr4jh@schtr4jh.net
+COPY private/* /var/www/
+COPY scripts/* /var/www/
+WORKDIR /var/www/
+RUN composer install --prefer-dist
+RUN yarn install || true
+COPY preview/* /var/www/preview/
+COPY build-hub /var/www/html/build-hub
+WORKDIR /var/www/html/
+RUN webpack --config=../webpack.preview.js
+
+FROM schtr4jh/pckg:latest
+MAINTAINER schtr4jh@schtr4jh.net
+
+COPY scripts/* /var/www/
+#COPY build-hub /var/www/build-hub
+COPY --from=deps /var/www/vendor /var/www/vendor
+COPY --from=deps /var/www/node_modules /var/www/node_modules
+COPY --from=deps /var/www/preview /var/www/preview
+
+WORKDIR /var/www/html/
+
+# entrypoint
+COPY docker-entrypoint-commsdev-hub-dev.sh /
+ENTRYPOINT ["sh", "/docker-entrypoint-commsdev-hub-dev.sh"]

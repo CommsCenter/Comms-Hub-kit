@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Demo Comms Hub preview</title>
+</head>
+<body>
+
+<hub-multiview id="vue-app"></hub-multiview>
+
+<!-- fetch core css from one of live stores for now -->
+<link rel="stylesheet" type="text/css"
+      href="https://comms.dev/storage/cache/www/less/libraries-theme-main-vue-footer-1633114510-5db35c18b147fda5864f2f21e5839aa3ead924d7.less.css"
+      id="style-id-libraries-theme-main-vue-footer"/>
+
+<!-- required libraries -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-router@2.8.1/dist/vue-router.min.js"></script>
+
+<!-- global page builder mixins and helpers -->
+<script src="/pagebuilder.js"></script>
+
+<!-- global page builder mixins and helpers -->
+<!-- those are publicly known and should be reused -->
+<script src="/pagebuilder.js"></script>
+
+<!-- served by webpack dev server -->
+<script src="/preview.js"></script>
+<script src="/build/autodiscover.js"></script>
+
+<link rel="stylesheet" type="text/css"
+      href="/build/autodiscover.css"/>
+
+<!-- initialize application ("show room") -->
+<script src="/footer.js"></script>
+
+<style>
+    iframe {
+        display: block;
+        float: left;
+        border: 3px solid #f7f6fc;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .as-table {
+        height: 66vh;
+    }
+
+    .as-table > div {
+        position: relative;
+    }
+</style>
+
+</body>
+</html>

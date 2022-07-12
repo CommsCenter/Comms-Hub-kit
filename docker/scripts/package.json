@@ -1,0 +1,29 @@
+{
+  "name": "comms-examples",
+  "version": "0.0.0.1",
+  "repository": "",
+  "license": "",
+  "private": true,
+  "browserslist": [
+    "last 3 versions",
+    "> 1%",
+    "IE 11"
+  ],
+  "devDependencies": {
+    "pckg-app-frontend-dev": "1.*",
+    "@webpack-cli/serve": "^1.1.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "pckg-app-frontend": "1.*",
+    "dropzone": "^5.*",
+    "vue-color-picker-wheel": "^0.*"
+  },
+  "scripts": {
+    "hub-preview": "webpack serve --host 0.0.0.0",
+    "hub-build": "webpack --config=../webpack.config.js",
+    "hub-autodiscover": "webpack serve --host 0.0.0.0 --config=../webpack.discover.js",
+    "hub-zip": ""
+  }
+}

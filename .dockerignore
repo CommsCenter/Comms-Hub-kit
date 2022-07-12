@@ -1,0 +1,3 @@
+docker/scripts/node_modules
+docker/scripts/vendor
+docker/private/auth.json

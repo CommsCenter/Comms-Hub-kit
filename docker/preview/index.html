@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Demo Comms Hub showroom</title>
+</head>
+<body>
+
+<script>
+    // how can we read this from a config file?
+    //
+    var Pckg = {
+        site: {
+            design: {
+                headerScope: 'dark',
+                logoMobile: 'https://gnpdev.cdn.startcomms.com/storage/uploads/backend/commslogo_3_6_4_1.png',
+                logoDesktop: 'https://gnpdev.cdn.startcomms.com/storage/uploads/backend/commslogo_3_6_4_1.png',
+            },
+            menus: {
+                frontend: [
+                    {
+                        url: 'https://comms.dev',
+                        title: 'Comms.dev',
+                        children: []
+                    },
+                    {
+                        url: 'https://hub.comms.dev',
+                        title: 'Comms Hub',
+                        children: []
+                    },
+                    {
+                        url: 'https://supervisor.comms.dev',
+                        title: 'Comms Supervisor',
+                        children: []
+                    },
+                    {
+                        url: 'https://admin.comms.dev',
+                        title: 'Comms Admin',
+                        children: []
+                    },
+                    {
+                        url: 'https://comms.tips',
+                        title: 'Comms Tips',
+                        children: []
+                    }
+                ],
+            },
+            title: '',
+        },
+        router: {
+            homepage: ''
+        }
+    }
+
+    window.observerOr = function(observer, or) {
+        return typeof ResizeObserver === 'undefined' ? or() : observer();
+    }
+</script>
+
+<!-- render the layout with header and other components -->
+<hub-showroom id="vue-app"></hub-showroom>
+
+<!-- fetch core css from one of live stores for now -->
+<!-- how can we extract and generalize the core? -->
+<link rel="stylesheet" type="text/css"
+      href="https://comms.dev/storage/cache/www/less/libraries-theme-main-vue-footer-1633114510-5db35c18b147fda5864f2f21e5839aa3ead924d7.less.css"
+      id="style-id-libraries-theme-main-vue-footer"/>
+
+<!-- required libraries -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-router@2.8.1/dist/vue-router.min.js"></script>
+
+<!-- global page builder mixins and helpers -->
+<!-- those are publicly known and should be reused -->
+<script src="/pagebuilder.js"></script>
+
+<!-- served by webpack dev server -->
+<script src="/preview.js"></script>
+
+<!-- built by autodiscovery -->
+<script src="/build/autodiscover.js"></script>
+<link rel="stylesheet" type="text/css" href="/build/autodiscover.css"/>
+
+<!-- initialize application ("show room") -->
+<script src="/footer.js"></script>
+
+</body>
+</html>

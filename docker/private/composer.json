@@ -1,0 +1,37 @@
+{
+  "name": "commscenter/comms-hub-kit",
+  "description": "Comms Hub kit",
+  "homepage": "https://github.com/commscenter/comms-hub-kit",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bojan Rajh",
+      "email": "bojan@comms.dev"
+    }
+  ],
+  "require": {
+    "commscenter/pagebuilder-extension-core": "dev-master",
+    "commscenter/pagebuilder-extension-comms": "dev-master",
+    "commscenter/pagebuilder": "dev-next-8.0"
+  },
+  "require-dev": {
+  },
+  "scripts": {
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/commscenter/pagebuilder-extension-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/commscenter/pagebuilder-extension-comms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/commscenter/pagebuilder.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
