@@ -22,7 +22,7 @@ Update our `comms-cli` alias in our profile.
 
 `$ nano ~/.zshrc`
 
-`alias comms-cli=”/usr/local/lib/node_modules/@comms/cli/build/cli-linux”`
+`alias comms-cli="/usr/local/lib/node_modules/@comms/cli/build/cli-linux"`
 
 Or update the symlink directly.
 
