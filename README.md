@@ -16,21 +16,7 @@ This repository contains:
 
 Install the latest version of `@comms/cli`
 
-`$ npm install -g @comms/cli`
-
-Update our `comms-cli` alias in our profile.
-
-`$ nano ~/.zshrc`
-
-`alias comms-cli="/usr/local/lib/node_modules/@comms/cli/build/cli-linux"`
-
-Or update the symlink directly.
-
-`$ ln -sf /usr/local/lib/node_modules/@comms/cli/build/cli-linux /usr/local/bin/comms-cli`
-
-Reload the profile (or open another terminal).
-
-`$ . ~/.zshrc`
+`$ npm i -g @comms/cli`
 
 Update docker image used for building assets.
 
@@ -98,5 +84,7 @@ directly from your store Library which you can find under Theme settings.
 See [./docs/DEMO.md](./DEMO.md)
 
 # Help
+
+See [@comms/cli](https://www.npmjs.com/package/@comms/cli) for more info.
 
 info@comms.dev

@@ -5,7 +5,7 @@ examples for all share types in [CommsCenter/commsexamples](https://github.com/c
 
 __Step 0: Set up Comms CLI and learn about basic commands__
 
-See how to [set up](./SETUP.md) Comms CLI. Make sure you're using the latest version.
+See how to [set up](../README.md) Comms CLI. Make sure you're using the latest version.
 
 You will also need a free development store. You can list your stores with `comms-cli stores:list` or create a new
 development store by running `comms-cli store:create`.
